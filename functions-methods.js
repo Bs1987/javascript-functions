@@ -49,6 +49,7 @@ console.log(getEmailDomain("a.wiersma@outlook.com"))
 
 // Steps
 //  X Declare a function typeOfEmail
+//  X Recall function getEmailDomain to find the domain of an email-adress
 //  X give values to domain types:
 //     - novi-education.nl = "Student"
 //     - novi.nl = "Medewerker"
@@ -57,8 +58,7 @@ console.log(getEmailDomain("a.wiersma@outlook.com"))
 // X return values
 
 function typeOfEmail (emailAdress) {
-    const atIndexNumber = emailAdress.indexOf("@");
-    const domain = emailAdress.substring(atIndexNumber + 1);
+const domain = getEmailDomain(emailAdress)
     if (domain === "novi-education.nl") {
         return "Student";
     }if (domain === "novi.nl") {
@@ -67,21 +67,10 @@ function typeOfEmail (emailAdress) {
         return "Extern"
     }
 }
-
 console.log(typeOfEmail("n.eeken@novi-education.nl"));
 console.log(typeOfEmail("t.mellink@novi.nl"));
 console.log(typeOfEmail("novi.nlaapjesk@outlook.com"));
 console.log(typeOfEmail("a.wiersma@outlook.com"));
-
-
-
-
-
-
-
-
-
-
 
 
 /* Opdracht  3 */
