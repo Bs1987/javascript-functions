@@ -9,6 +9,26 @@
 // getEmailDomain("t.mellink@novi.nl") geeft novi.nl
 // getEmailDomain("a.wiersma@outlook.com") geeft outlook.com
 
+//Requirements
+// expect an e-mailadress
+// return domain name
+
+//Steps:
+//  X declare function expecting an e-mailadress
+//  X find index of "@" and put into variable
+//  X make variable domain
+//  X domain is located at index number after "@"
+//  X return every value after index number of "@" (so "@" +)
+//  X log function with different arguments to test
+
+function getEmailDomain(emailAdress) {
+    const atIndexNumber = emailAdress.indexOf("@")
+    const domain = emailAdress.substring(atIndexNumber + 1)
+    return domain
+        }
+console.log(getEmailDomain("n.eeken@novi-education.nl"))
+console.log(getEmailDomain("t.mellink@novi.nl"))
+console.log(getEmailDomain("a.wiersma@outlook.com"))
 
 
 
@@ -19,7 +39,6 @@
 // typeOfEmail("t.mellink@novi.nl") geeft geeft "Medewerker"
 // typeOfEmail("novi.nlaapjesk@outlook.com") geeft geeft "Extern" <-- deze moet het ook doen!
 // typeOfEmail("a.wiersma@outlook.com") geeft "Extern"
-
 
 
 /* Opdracht  3 */
