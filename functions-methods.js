@@ -105,10 +105,9 @@ console.log(typeOfEmail("a.wiersma@outlook.com"));
 function checkEmailValidity(emailAdress) {
     const includesAt = emailAdress.includes("@");
     const noComma = emailAdress.includes(",");
-    const indexLastCharacter = emailAdress.length;
-    const lastCharacter = emailAdress.substring(indexLastCharacter - 1);
+    const lastCharacter = emailAdress.substring(emailAdress.length - 1);
     const noPeriodLastCharacter = lastCharacter.includes(".")
-    if (includesAt === true && noComma === false && noPeriodLastCharacter === false) {
+    if (includesAt === true && noComma !== true && noPeriodLastCharacter !== true) {
         return true
     } else {
         return false
