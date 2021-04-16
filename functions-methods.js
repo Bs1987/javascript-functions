@@ -40,6 +40,49 @@ console.log(getEmailDomain("a.wiersma@outlook.com"))
 // typeOfEmail("novi.nlaapjesk@outlook.com") geeft geeft "Extern" <-- deze moet het ook doen!
 // typeOfEmail("a.wiersma@outlook.com") geeft "Extern"
 
+// Requirements:
+// - Expect an email-adress
+// - Check type of domain
+// - Give values to different domain types
+// - Return values of domain types
+// - Test different domain types
+
+// Steps
+//  X Declare a function typeOfEmail
+//  X give values to domain types:
+//     - novi-education.nl = "Student"
+//     - novi.nl = "Medewerker"
+//     - other = "Extern"
+// X Look for values in function arguments
+// X return values
+
+function typeOfEmail (emailAdress) {
+    const atIndexNumber = emailAdress.indexOf("@");
+    const domain = emailAdress.substring(atIndexNumber + 1);
+    if (domain === "novi-education.nl") {
+        return "Student";
+    }if (domain === "novi.nl") {
+        return "Medewerker";
+    }else {
+        return "Extern"
+    }
+}
+
+console.log(typeOfEmail("n.eeken@novi-education.nl"));
+console.log(typeOfEmail("t.mellink@novi.nl"));
+console.log(typeOfEmail("novi.nlaapjesk@outlook.com"));
+console.log(typeOfEmail("a.wiersma@outlook.com"));
+
+
+
+
+
+
+
+
+
+
+
 
 /* Opdracht  3 */
 // Schrijf een functie genaamd checkEmailValidity, die een emailadres verwacht en checkt of het emailadres valide is. De functie returned true of false, afhankelijk van de uitkomst.
