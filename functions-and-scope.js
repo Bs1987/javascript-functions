@@ -20,16 +20,9 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 
 // Steps:
 //  X run through array
-//  - find numbers higher or equal to 8
+//  X find numbers higher or equal to 8
 //  - save numbers new array
-console.log(grades);
-for (let i = 0; i < grades.length; i++) {
-    if (grades[i] >= 8) {
-        console.log(i + " Cum laude")
-    }else {
-        console.log(i + " Not Cum laude")
-    }
-}
+// console.log(grades);
 
 // ---- Verwachte uitkomst: 6
 
@@ -43,8 +36,6 @@ for (let i = 0; i < grades.length; i++) {
 // cumLaude(grades) geeft 6
 // cumLaude([6, 4, 5]) geeft 0
 // cumLaude([8, 9, 4, 6, 10]) geeft 3
-
-
 
 
 /* Opdracht  2: Gemiddeld cijfer */
@@ -74,8 +65,6 @@ for (let i = 0; i < grades.length; i++) {
 /* 2c: Afronden op twee decimalen */
 // Zorg ervoor dat het gemiddelde cijfer dat wordt teruggegeven uit de functie netjes wordt afgerond op twee decimalen.
 // Tip: Google is your best friend!
-
-
 
 
 /* Bonusopdracht: hoogste cijfer */
