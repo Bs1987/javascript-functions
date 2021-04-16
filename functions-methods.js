@@ -25,11 +25,11 @@ function getEmailDomain(emailAdress) {
     const atIndexNumber = emailAdress.indexOf("@")
     const domain = emailAdress.substring(atIndexNumber + 1)
     return domain
-        }
+}
+
 console.log(getEmailDomain("n.eeken@novi-education.nl"))
 console.log(getEmailDomain("t.mellink@novi.nl"))
 console.log(getEmailDomain("a.wiersma@outlook.com"))
-
 
 
 /* Opdracht  2 */
@@ -57,16 +57,17 @@ console.log(getEmailDomain("a.wiersma@outlook.com"))
 // X Look for values in function arguments
 // X return values
 
-function typeOfEmail (emailAdress) {
-const domain = getEmailDomain(emailAdress)
-    if (domain === "novi-education.nl") {
+function typeOfEmail(emailAdress) {
+    if (getEmailDomain(emailAdress) === "novi-education.nl") {
         return "Student";
-    }if (domain === "novi.nl") {
+    }
+    if (getEmailDomain(emailAdress) === "novi.nl") {
         return "Medewerker";
-    }else {
+    } else {
         return "Extern"
     }
 }
+
 console.log(typeOfEmail("n.eeken@novi-education.nl"));
 console.log(typeOfEmail("t.mellink@novi.nl"));
 console.log(typeOfEmail("novi.nlaapjesk@outlook.com"));
