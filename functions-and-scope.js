@@ -19,10 +19,21 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 //  - Print amount of grades higher or equal to 8
 
 // Steps:
-//  X run through array
-//  X find numbers higher or equal to 8
-//  - save numbers new array
-// console.log(grades);
+//  - run through array
+//  - find numbers higher or equal to 8
+//  - save numbers in new array
+console.log(grades);
+for (let i = 0; i < grades.length; i++) {
+    if (grades[i] >= 8){
+        console.log(grades[i]);
+    }
+}
+
+
+
+
+
+
 
 // ---- Verwachte uitkomst: 6
 
