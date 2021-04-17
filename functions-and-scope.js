@@ -14,26 +14,39 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // * Hoe zorgt ik ervoor dat wanneer ik een cijfer tegenkom die aan de conditie voldoet, ik dit ergens kan bijhouden?
 // Log het antwoord in de terminal.
 
-//Requirements:
-//  - Find grades higher or equal to 8
-//  - Print amount of grades higher or equal to 8
 
 // Steps:
-//  - run through array
-//  - find numbers higher or equal to 8
-//  - save numbers in new array
-console.log(grades);
-for (let i = 0; i < grades.length; i++) {
-    if (grades[i] >= 8){
-        console.log(grades[i]);
+
+//  X Supply a an array to fill with high grades. (cumLaudeArray)
+//  X run through array (for loop)
+//  X find numbers higher or equal to 8 (conditional statement)
+//  X save numbers in new array
+//  X calculate amount of high grades (array.length)
+
+function cumLaudeArray(grades) {
+    let cumLaudeArray = []; //Make array to fill with grades
+        // console.log(cumLaudeArray); // cumLaudeArray is still empty
+    for (let i = 0; i < grades.length; i++) { //Loop all grades till end of grades array
+        //If grades are equal to or higher than 8, make a new variable cumLaude.
+        if (grades[i] >= 8) {
+            const cumLaude = grades[i];
+            // console.log(cumLaude); //gives out one value at a time
+            //Add new value of cumLaude to cumLaudeArray
+            cumLaudeArray.push(cumLaude);
+            // console.log(cumLaudeArray) //Adds value from cumLaude for each loop to array
+        }
     }
+    //When loop is finished, return value of cumLAudeArray
+    return cumLaudeArray;
+    // console.log(cumLaudeArray) //Shows full array after loop has ended
 }
 
+// console.log(cumLaudeArray(grades)); //call function to print cumLaudeArray
+const numberOfCumLaudeStudentes = cumLaudeArray(grades).length; //calculate lengte of array and save into variable
+console.log("Er moeten " + numberOfCumLaudeStudentes + " Cum laude diploma's worden besteld.");
 
 
-
-
-
+// console.log(cumLaudeArray);
 
 // ---- Verwachte uitkomst: 6
 
