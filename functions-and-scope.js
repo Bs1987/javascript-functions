@@ -23,21 +23,15 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 //  X save numbers in new array
 //  X calculate amount of high grades (array.length)
 
-function cumLaude([]) {
-
-    let cumLaudeArray = [];
-    for (let i = 0; i < grades.length; i++) {
-        if (grades[i] >= 8) {
-            const cumLaude = grades[i];
-            cumLaudeArray.push(cumLaude);
-        }
+let cumLaudeArray = [];
+for (let i = 0; i < grades.length; i++) {
+    if (grades[i] >= 8) {
+        const cumLaude = grades[i];
+        cumLaudeArray.push(cumLaude);
     }
-    return cumLaudeArray.length;
-
-
 }
+console.log(cumLaudeArray.length);
 
-console.log(cumLaude(grades));
 
 
 
