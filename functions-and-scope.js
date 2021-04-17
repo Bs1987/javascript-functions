@@ -135,20 +135,36 @@ console.log(averageGrade([8, 9, 4, 6, 10]));
 // * Op welke conditie moet ik checken?
 // * Hoe zorgt ik ervoor dat wanneer ik een cijfer tegenkom die aan de conditie voldoet, ik dit ergens kan opslaan?
 // Log het antwoord in de terminal.
-
-Steps:
-    - Loop through array
-    - Design condition to check highest value in array
-    - Make new variable for highest array value
-
-
-
-    for (let i = 0; i < grades.length; i++) {
-        console.log(grades[i]);
-
+//
+// Steps:
+//     x Loop through array
+//     x Design condition to check highest value in array
+//     x Make new variable for highest array value
+//     x Condition: Current value should be higher than previous value
+//     x If current value is higher than previous value, save it in currentvalue variable
+//     x If current value is not higher than previous value, go through loop again.
+//     x Print highest number after loop is finished
+let highestGrade = 0;
+for (let i = 0; i < grades.length; i++) {
+    if (grades[i] > highestGrade) {
+        highestGrade = grades[i];
+        console.log("HIGHEST GRADE IS: " + highestGrade);
     }
+}
 
 
+// // Step 2. Create the first FOR loop that will iterate through the arrays
+// for(var arrayIndex = 0; arrayIndex < grades.length; arrayIndex++) {
+//     /* The starting point, index 0, corresponds to the first array */
+//
+//     // Step 3. Create the second FOR loop that will iterate through the sub-arrays
+//     for(var subArrayIndex = 0; subArrayIndex < grades[arrayIndex].length; subArrayIndex++) {
+//         /* The starting point, index 0, corresponds to the first sub-array */
+//
+//         if(arr[arrayIndex][subArrayIndex] > grades[arrayIndex]) {
+//
+//             grades[arrayIndex] = grades[arrayIndex][subArrayIndex];
+//
 
 
 // ---- Verwachte uitkomst: 9
