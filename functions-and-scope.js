@@ -115,7 +115,7 @@ function averageGrade(studentGrades) {
     }
     console.log("THE SUM OF ALL THE GRADES IN FUNCTION IS: " + sumOfGrades);
     const gradeAverage = sumOfGrades / amountOfGrades;
-    return gradeAverage.toFixed(2);
+    return "Average grade is: " + gradeAverage.toFixed(2);
 }
 
 console.log(averageGrade(grades));
@@ -144,23 +144,41 @@ console.log(averageGrade([8, 9, 4, 6, 10]));
 //     x If current value is higher than previous value, save it in currentvalue variable
 //     x If current value is not higher than previous value, go through loop again.
 //     x Print highest number after loop is finished
-let highestGrade = 0;
-for (let i = 0; i < grades.length; i++) {
-    if (grades[i] > highestGrade) {
+
+let highestGrade = grades[0];
+
+for (var i = 0; i < grades.length; i++) {
+    if (highestGrade < grades[i] ) {
         highestGrade = grades[i];
-        console.log("HIGHEST GRADE IS: " + highestGrade);
     }
 }
-
+console.log(highestGrade);
 // ---- Verwachte uitkomst: 9
 
 
 /* 3b: Omschrijven tot een herbruikbare functie */
-// Schrijf een functie genaamd highestGrade, die een array van cijfers verwacht (zoals grades) en het hoogste cijfer teruggeeft. Gebruik hiervoor jouw antwoord van 3a.
+// Schrijf een functie genaamd highGrade, die een array van cijfers verwacht (zoals grades) en het hoogste cijfer teruggeeft. Gebruik hiervoor jouw antwoord van 3a.
 // Zorg ervoor dat jouw functie ook werkt als we een andere array willen checken, zoals bijvoorbeeld: [6, 4, 5] of [8, 9, 4, 6, 10].
 // Log het antwoord in de terminal.
+// function highestGrade (studentGrades) {
+//     let highGrade = 0;
+//     for (let i = 0; i < studentGrades.length; i++) {
+//         let currentValue = studentGrades[i];
+//         // console.log("CURRENTVALUE IS: " + currentValue);
+//         if (studentGrades[i] > currentValue) {
+//             // console.log("GRADE BIGGER THAN 8 IS: " + grades[i]);
+//         }
+//         break
+//
+//     }
+// }
+// console.log(highestGrade(grades));
+// console.log(highestGrade([6, 4, 5]));
+// console.log(highestGrade([8, 9, 4, 6, 10 ]));
+
 
 // ---- Verwachte uitkomsten:
-// highestGrade(grades) geeft 9
-// highestGrade([6, 4, 5]) geeft 6
-// highestGrade([8, 9, 4, 6, 10]) geeft 10
+// highGrade(grades) geeft 9
+// highGrade([6, 4, 5]) geeft 6
+// highGrade([8, 9, 4, 6, 10]) geeft 10
+
