@@ -75,6 +75,20 @@ console.log(cumLaude([8, 9, 4, 6, 10]));
 // * Hoe zorgt ik ervoor dat ik alle waardes uit de array kan langslopen, ook als de array wel 100 entries zou bevatten?
 // Log het antwoord in de terminal.
 
+//Steps:
+//     - Calculate averaged: add all values and divide by amount of values
+//     - Collect all values
+//     - Count amount of values present in array
+//     - make a loop for array length to adjust to length of array
+for (let i = 0; i < grades.length; i++) {
+    console.log(grades[i]); //print all values in array one by one
+
+
+}
+
+
+
+
 // ---- Verwachte uitkomst: 6.642857142857143
 
 
