@@ -136,6 +136,21 @@ console.log(averageGrade([8, 9, 4, 6, 10]));
 // * Hoe zorgt ik ervoor dat wanneer ik een cijfer tegenkom die aan de conditie voldoet, ik dit ergens kan opslaan?
 // Log het antwoord in de terminal.
 
+Steps:
+    - Loop through array
+    - Design condition to check highest value in array
+    - Make new variable for highest array value
+
+
+
+    for (let i = 0; i < grades.length; i++) {
+        console.log(grades[i]);
+
+    }
+
+
+
+
 // ---- Verwachte uitkomst: 9
 
 
