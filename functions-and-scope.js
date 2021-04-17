@@ -33,8 +33,6 @@ for (let i = 0; i < grades.length; i++) {
 console.log(cumLaudeArray.length);
 
 
-
-
 // ---- Verwachte uitkomst: 6
 
 
@@ -61,6 +59,7 @@ function cumLaude(studentGrades) {
     }
     return cumLaudeArray.length;
 }
+
 console.log(cumLaude(grades));
 console.log(cumLaude([6, 4, 5]));
 console.log(cumLaude([8, 9, 4, 6, 10]));
@@ -85,16 +84,15 @@ console.log(cumLaude([8, 9, 4, 6, 10]));
 //     - Put outcome in variable
 
 const amountOfGrades = grades.length;
-console.log(amountOfGrades);
+console.log("AMOUNT OF GRADES IS: " + amountOfGrades);
 
+let addedGrades = 0;
 for (let i = 0; i < amountOfGrades; i++) {
     // console.log(grades[i]); //print all values in array one by one
-
-
+    addedGrades = addedGrades + grades[i];
+    // console.log("ADDEDGRADES IS: " + addedGrades);
 }
-
-
-
+console.log("ALL GRADES ADDED UP IS: " + addedGrades);
 
 // ---- Verwachte uitkomst: 6.642857142857143
 
