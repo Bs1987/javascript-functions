@@ -49,7 +49,6 @@ console.log(cumLaudeArray.length);
 // console.log(cumLaude([6, 4, 5]));
 // console.log(cumLaude([8, 9, 4, 6, 10]));
 function cumLaude(studentGrades) {
-
     let cumLaudeArray = [];
     for (let i = 0; i < studentGrades.length; i++) {
         if (studentGrades[i] >= 8) {
@@ -86,14 +85,12 @@ console.log(cumLaude([8, 9, 4, 6, 10]));
 const amountOfGrades = grades.length;
 console.log("AMOUNT OF GRADES IS: " + amountOfGrades);
 
-let sumOfgrades = 0;
+let sumOfGrades = 0;
 for (let i = 0; i < amountOfGrades; i++) {
-    // console.log(grades[i]); //print all values in array one by one
-    sumOfgrades = sumOfgrades + grades[i];
-    // console.log("SUMOFGRADES IS: " + sumOfgrades);
+    sumOfGrades = sumOfGrades + grades[i];
 }
-console.log("THE SUM OF ALL THE GRADES IS: " + sumOfgrades);
-const gradeAverage = sumOfgrades / amountOfGrades;
+console.log("THE SUM OF ALL THE GRADES IS: " + sumOfGrades);
+const gradeAverage = sumOfGrades / amountOfGrades;
 console.log(gradeAverage);
 
 // ---- Verwachte uitkomst: 6.642857142857143
@@ -109,6 +106,21 @@ console.log(gradeAverage);
 // averageGrade([6, 4, 5]) geeft xxxx
 // averageGrade([8, 9, 4, 6, 10]) geeft xxxx
 
+function averageGrade(studentGrades) {
+    const amountOfGrades = studentGrades.length;
+    console.log("AMOUNT OF GRADES IN FUNCTION IS: " + amountOfGrades);
+    let sumOfGrades = 0;
+    for (let i = 0; i < amountOfGrades; i++) {
+        sumOfGrades = sumOfGrades + studentGrades[i];
+    }
+    console.log("THE SUM OF ALL THE GRADES IN FUNCTION IS: " + sumOfGrades);
+    const gradeAverage = sumOfGrades / amountOfGrades;
+    return gradeAverage.toFixed(2);
+}
+
+console.log(averageGrade(grades));
+console.log(averageGrade([6, 4, 5]));
+console.log(averageGrade([8, 9, 4, 6, 10]));
 
 /* 2c: Afronden op twee decimalen */
 // Zorg ervoor dat het gemiddelde cijfer dat wordt teruggegeven uit de functie netjes wordt afgerond op twee decimalen.
