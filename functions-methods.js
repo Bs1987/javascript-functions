@@ -9,7 +9,27 @@
 // getEmailDomain("t.mellink@novi.nl") geeft novi.nl
 // getEmailDomain("a.wiersma@outlook.com") geeft outlook.com
 
+//Requirements
+// expect an e-mailadress
+// return domain name
 
+//Steps:
+//  X declare function expecting an e-mailadress
+//  X find index of "@" and put into variable
+//  X make variable domain
+//  X domain is located at index number after "@"
+//  X return every value after index number of "@" (so "@" +)
+//  X log function with different arguments to test
+
+function getEmailDomain(emailAdress) {
+    const atIndexNumber = emailAdress.indexOf("@")
+    const domain = emailAdress.substring(atIndexNumber + 1)
+    return domain
+}
+
+console.log(getEmailDomain("n.eeken@novi-education.nl"))
+console.log(getEmailDomain("t.mellink@novi.nl"))
+console.log(getEmailDomain("a.wiersma@outlook.com"))
 
 
 /* Opdracht  2 */
@@ -20,6 +40,38 @@
 // typeOfEmail("novi.nlaapjesk@outlook.com") geeft geeft "Extern" <-- deze moet het ook doen!
 // typeOfEmail("a.wiersma@outlook.com") geeft "Extern"
 
+// Requirements:
+// - Expect an email-adress
+// - Check type of domain
+// - Give values to different domain types
+// - Return values of domain types
+// - Test different domain types
+
+// Steps
+//  X Declare a function typeOfEmail
+//  X Recall function getEmailDomain to find the domain of an email-adress
+//  X give values to domain types:
+//     - novi-education.nl = "Student"
+//     - novi.nl = "Medewerker"
+//     - other = "Extern"
+// X Look for values in function arguments
+// X return values
+
+function typeOfEmail(emailAdress) {
+    if (getEmailDomain(emailAdress) === "novi-education.nl") {
+        return "Student";
+    }
+    if (getEmailDomain(emailAdress) === "novi.nl") {
+        return "Medewerker";
+    } else {
+        return "Extern"
+    }
+}
+
+console.log(typeOfEmail("n.eeken@novi-education.nl"));
+console.log(typeOfEmail("t.mellink@novi.nl"));
+console.log(typeOfEmail("novi.nlaapjesk@outlook.com"));
+console.log(typeOfEmail("a.wiersma@outlook.com"));
 
 
 /* Opdracht  3 */
@@ -34,3 +86,35 @@
 // checkEmailValidity("n.eekenanovi.nl") geeft false - want geen @
 // checkEmailValidity("n.eeken@novinl.") geeft false - want de punt mag niet als laatst
 // checkEmailValidity("tessmellink@novi,nl") geeft false - want er staat een komma in
+
+// Requirements
+// Ask email-adress
+// Make requirements for email-adress:
+//     - has to include an "@"
+//     - does not have ","
+//     - does not have "." at the end
+// Return true or false
+
+//Steps:
+// X Declare function
+// X Set parameters
+// X Set requirements for email-adress
+// X Check if arguments fit requirements
+// X Return true or false
+
+function checkEmailValidity(emailAdress) {
+    const includesAt = emailAdress.includes("@"); //Look for "@"
+    const noComma = emailAdress.includes(","); // Look for ","
+    const noPeriodLastCharacter = emailAdress.substring(emailAdress.length - 1).includes(".") // Look for last character and if it's "
+    if (includesAt === true && noComma !== true && noPeriodLastCharacter !== true) {
+        return true
+    } else {
+        return false
+    }
+}
+
+console.log(checkEmailValidity("n.eeken@novi.nl"));
+console.log(checkEmailValidity("tessmellink@novi.nl"));
+console.log(checkEmailValidity("n.eekenanovi.nl"));
+console.log(checkEmailValidity("n.eeken@novinl."));
+console.log(checkEmailValidity("tessmellink@novi,nl"));
