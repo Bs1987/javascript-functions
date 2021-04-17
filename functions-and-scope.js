@@ -152,21 +152,6 @@ for (let i = 0; i < grades.length; i++) {
     }
 }
 
-
-// // Step 2. Create the first FOR loop that will iterate through the arrays
-// for(var arrayIndex = 0; arrayIndex < grades.length; arrayIndex++) {
-//     /* The starting point, index 0, corresponds to the first array */
-//
-//     // Step 3. Create the second FOR loop that will iterate through the sub-arrays
-//     for(var subArrayIndex = 0; subArrayIndex < grades[arrayIndex].length; subArrayIndex++) {
-//         /* The starting point, index 0, corresponds to the first sub-array */
-//
-//         if(arr[arrayIndex][subArrayIndex] > grades[arrayIndex]) {
-//
-//             grades[arrayIndex] = grades[arrayIndex][subArrayIndex];
-//
-
-
 // ---- Verwachte uitkomst: 9
 
 
