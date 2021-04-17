@@ -50,7 +50,20 @@ console.log(cumLaudeArray.length);
 // console.log(cumLaude(grades));
 // console.log(cumLaude([6, 4, 5]));
 // console.log(cumLaude([8, 9, 4, 6, 10]));
+function cumLaude(studentGrades) {
 
+    let cumLaudeArray = [];
+    for (let i = 0; i < studentGrades.length; i++) {
+        if (studentGrades[i] >= 8) {
+            const cumLaude = studentGrades[i];
+            cumLaudeArray.push(cumLaude);
+        }
+    }
+    return cumLaudeArray.length;
+}
+console.log(cumLaude(grades));
+console.log(cumLaude([6, 4, 5]));
+console.log(cumLaude([8, 9, 4, 6, 10]));
 
 /* Opdracht  2: Gemiddeld cijfer */
 
