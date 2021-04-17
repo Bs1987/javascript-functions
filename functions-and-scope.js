@@ -76,12 +76,19 @@ console.log(cumLaude([8, 9, 4, 6, 10]));
 // Log het antwoord in de terminal.
 
 //Steps:
-//     - Calculate averaged: add all values and divide by amount of values
+//     - Calculate average: add all values and divide by amount of values
+//     - Find length of array
+//     - Make variable for length of array
 //     - Collect all values
-//     - Count amount of values present in array
-//     - make a loop for array length to adjust to length of array
-for (let i = 0; i < grades.length; i++) {
-    console.log(grades[i]); //print all values in array one by one
+//     - Make variable with collected values from array
+//     - Divide collected values by length of array
+//     - Put outcome in variable
+
+const amountOfGrades = grades.length;
+console.log(amountOfGrades);
+
+for (let i = 0; i < amountOfGrades; i++) {
+    // console.log(grades[i]); //print all values in array one by one
 
 
 }
