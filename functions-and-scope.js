@@ -145,14 +145,14 @@ console.log(averageGrade([8, 9, 4, 6, 10]));
 //     x If current value is not higher than previous value, go through loop again.
 //     x Print highest number after loop is finished
 
-let highestGrade = grades[0];
+let highGrade = grades[0];
 
-for (var i = 0; i < grades.length; i++) {
-    if (highestGrade < grades[i] ) {
-        highestGrade = grades[i];
+for (let i = 0; i < grades.length; i++) {
+    if (highGrade < grades[i]) {
+        highGrade = grades[i];
     }
 }
-console.log(highestGrade);
+console.log(highGrade);
 // ---- Verwachte uitkomst: 9
 
 
@@ -160,21 +160,22 @@ console.log(highestGrade);
 // Schrijf een functie genaamd highGrade, die een array van cijfers verwacht (zoals grades) en het hoogste cijfer teruggeeft. Gebruik hiervoor jouw antwoord van 3a.
 // Zorg ervoor dat jouw functie ook werkt als we een andere array willen checken, zoals bijvoorbeeld: [6, 4, 5] of [8, 9, 4, 6, 10].
 // Log het antwoord in de terminal.
-// function highestGrade (studentGrades) {
-//     let highGrade = 0;
-//     for (let i = 0; i < studentGrades.length; i++) {
-//         let currentValue = studentGrades[i];
-//         // console.log("CURRENTVALUE IS: " + currentValue);
-//         if (studentGrades[i] > currentValue) {
-//             // console.log("GRADE BIGGER THAN 8 IS: " + grades[i]);
-//         }
-//         break
-//
-//     }
-// }
-// console.log(highestGrade(grades));
-// console.log(highestGrade([6, 4, 5]));
-// console.log(highestGrade([8, 9, 4, 6, 10 ]));
+function highestGrade(studentGrades) {
+    let highestGrade = studentGrades[0];
+
+    for (let i = 0; i < studentGrades.length; i++) {
+        if (highestGrade < studentGrades[i]) {
+            highestGrade = studentGrades[i];
+        }
+    }
+    return highestGrade;
+
+
+}
+
+console.log(highestGrade(grades));
+console.log(highestGrade([6, 4, 5]));
+console.log(highestGrade([8, 9, 4, 6, 10]));
 
 
 // ---- Verwachte uitkomsten:
