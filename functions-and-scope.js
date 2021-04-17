@@ -23,30 +23,23 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 //  X save numbers in new array
 //  X calculate amount of high grades (array.length)
 
-function cumLaudeArray(grades) {
-    let cumLaudeArray = []; //Make array to fill with grades
-        // console.log(cumLaudeArray); // cumLaudeArray is still empty
-    for (let i = 0; i < grades.length; i++) { //Loop all grades till end of grades array
-        //If grades are equal to or higher than 8, make a new variable cumLaude.
+function cumLaude([]) {
+
+    let cumLaudeArray = [];
+    for (let i = 0; i < grades.length; i++) {
         if (grades[i] >= 8) {
             const cumLaude = grades[i];
-            // console.log(cumLaude); //gives out one value at a time
-            //Add new value of cumLaude to cumLaudeArray
             cumLaudeArray.push(cumLaude);
-            // console.log(cumLaudeArray) //Adds value from cumLaude for each loop to array
         }
     }
-    //When loop is finished, return value of cumLAudeArray
-    return cumLaudeArray;
-    // console.log(cumLaudeArray) //Shows full array after loop has ended
+    return cumLaudeArray.length;
+
+
 }
 
-// console.log(cumLaudeArray(grades)); //call function to print cumLaudeArray
-const numberOfCumLaudeStudentes = cumLaudeArray(grades).length; //calculate lengte of array and save into variable
-console.log("Er moeten " + numberOfCumLaudeStudentes + " Cum laude diploma's worden besteld.");
+console.log(cumLaude(grades));
 
 
-// console.log(cumLaudeArray);
 
 // ---- Verwachte uitkomst: 6
 
@@ -60,6 +53,9 @@ console.log("Er moeten " + numberOfCumLaudeStudentes + " Cum laude diploma's wor
 // cumLaude(grades) geeft 6
 // cumLaude([6, 4, 5]) geeft 0
 // cumLaude([8, 9, 4, 6, 10]) geeft 3
+// console.log(cumLaude(grades));
+// console.log(cumLaude([6, 4, 5]));
+// console.log(cumLaude([8, 9, 4, 6, 10]));
 
 
 /* Opdracht  2: Gemiddeld cijfer */
