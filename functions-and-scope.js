@@ -86,13 +86,14 @@ console.log(cumLaude([8, 9, 4, 6, 10]));
 const amountOfGrades = grades.length;
 console.log("AMOUNT OF GRADES IS: " + amountOfGrades);
 
-let addedGrades = 0;
+let sumOfgrades = 0;
 for (let i = 0; i < amountOfGrades; i++) {
     // console.log(grades[i]); //print all values in array one by one
-    addedGrades = addedGrades + grades[i];
-    // console.log("ADDEDGRADES IS: " + addedGrades);
+    sumOfgrades = sumOfgrades + grades[i];
+    // console.log("SUMOFGRADES IS: " + sumOfgrades);
 }
-console.log("ALL GRADES ADDED UP IS: " + addedGrades);
+console.log("THE SUM OF ALL THE GRADES IS: " + sumOfgrades);
+const gradeAverage = sumOfgrades / amountOfGrades;
 
 // ---- Verwachte uitkomst: 6.642857142857143
 
